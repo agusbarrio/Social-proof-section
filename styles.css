@@ -1,0 +1,231 @@
+/* Variables */
+:root {
+  /* Colors */
+  /* Primary */
+
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Spartan", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url("images/bg-pattern-top-mobile.svg"),
+    url("images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Main */
+main {
+  padding: 3rem 0;
+}
+/* Social proof section styles */
+
+.social-proof-section {
+  width: clamp(200px, 91vw, 500px);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.social-proof-section p {
+  line-height: 1.5rem;
+}
+.social-proof-section-header {
+  text-align: center;
+  color: var(--very-dark-magenta);
+}
+
+.social-proof-section-header h1 {
+  line-height: 2rem;
+  font-weight: 700;
+  font-size: 2rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.social-proof-section-header p {
+  margin: 0;
+}
+
+.social-proof-section-stars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.stars-puntuation {
+  background-color: var(--light-grayish-magenta);
+  text-align: center;
+  font-weight: 700;
+  padding-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.social-proof-section-customers {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.customer {
+  padding: 2rem;
+  background-color: var(--very-dark-magenta);
+  color: var(--light-grayish-magenta);
+  border-radius: 0.5rem;
+}
+
+.customer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.customer-profile {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.customer-profile img {
+  border-radius: 50%;
+  width: 3rem;
+  height: auto;
+}
+
+.customer-profile p:last-child {
+  color: var(--soft-pink);
+}
+/* Media queries */
+
+@media (min-width: 992px) {
+  body {
+    background-image: url("images/bg-pattern-top-desktop.svg"),
+      url("images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+  }
+  main {
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-proof-section {
+    margin: 0;
+    width: 85vw;
+    max-width: 1200px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .social-proof-section-header {
+    text-align: left;
+    width: 40%;
+  }
+  .social-proof-section-header h1 {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .social-proof-section-stars {
+    justify-content: center;
+    width: 50%;
+  }
+
+  .stars-puntuation {
+    text-align: left;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+  }
+
+  .stars {
+    width: 40%;
+  }
+
+  .stars-puntuation:nth-child(1) {
+    align-self: flex-start;
+  }
+
+  .stars-puntuation:nth-child(2) {
+    align-self: center;
+  }
+
+  .stars-puntuation:nth-child(3) {
+    align-self: flex-end;
+  }
+
+  .social-proof-section-customers {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 275px;
+    margin-top: 2rem;
+  }
+  .customer {
+    width: 31%;
+  }
+  .customer:nth-child(1) {
+    align-self: flex-start;
+  }
+  .customer:nth-child(2) {
+    align-self: center;
+  }
+  .customer:nth-child(3) {
+    align-self: flex-end;
+  }
+}
+
+/* Footer */
+.attribution {
+  align-self: center;
+  width: 100%;
+  color: var(--very-dark-magenta);
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.attribution p {
+  margin: 0;
+}
+
+.attribution a {
+  color: var(--soft-pink);
+}
